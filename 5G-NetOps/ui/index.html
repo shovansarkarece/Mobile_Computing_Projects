@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>5G-NetOps Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>5G Network Operations Dashboard</h1>
+
+<div class="dashboard">
+
+    <div class="control-card">
+        <h2>Select Use Cases</h2>
+
+        <label><input type="checkbox" value="UC-01"> Mobile Broadband</label>
+        <label><input type="checkbox" value="UC-02"> Connected Cars</label>
+        <label><input type="checkbox" value="UC-03"> Industrial IoT</label>
+
+        <button onclick="activate()">Activate</button>
+
+        <div class="loader" id="loader"></div>
+
+        <div id="result"></div>
+    </div>
+
+</div>
+
+<h2>Network Topology</h2>
+
+<div class="topology">
+    <div class="node">UE</div>
+    <div class="line"></div>
+    <div class="node">gNB</div>
+    <div class="line"></div>
+    <div class="node">AMF</div>
+    <div class="line"></div>
+    <div class="node">SMF</div>
+    <div class="line"></div>
+    <div class="node">UPF</div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

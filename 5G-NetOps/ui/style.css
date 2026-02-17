@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Title */
+h1 {
+    margin-top: 30px;
+    font-size: 32px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Card */
+.control-card {
+    background: rgba(255,255,255,0.08);
+    padding: 30px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    animation: slideUp 1s ease;
+}
+
+/* Checkbox Labels */
+label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* Button */
+button {
+    margin-top: 15px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00c6ff;
+}
+
+/* Loader Spinner */
+.loader {
+    margin: 15px auto;
+    border: 4px solid rgba(255,255,255,0.2);
+    border-top: 4px solid #00c6ff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+/* Result */
+#result {
+    margin-top: 15px;
+    font-weight: bold;
+    white-space: pre-line;
+}
+
+/* Topology */
+.topology {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    animation: fadeIn 2s ease;
+}
+
+.node {
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: 0.3s;
+}
+
+.node.active {
+    background: #00ffae;
+    color: black;
+    box-shadow: 0 0 20px #00ffae;
+}
+
+.line {
+    width: 40px;
+    height: 3px;
+    background: #00c6ff;
+}
+
+/* Animations */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {transform: translateY(50px); opacity:0;}
+    to {transform: translateY(0); opacity:1;}
+}
+/* Slice Colors */
+.slice-blue {
+    background: #00c6ff !important;
+    box-shadow: 0 0 20px #00c6ff;
+    color: black;
+}
+
+.slice-purple {
+    background: #b347ff !important;
+    box-shadow: 0 0 20px #b347ff;
+    color: white;
+}
+
+.slice-green {
+    background: #00ffae !important;
+    box-shadow: 0 0 20px #00ffae;
+    color: black;
+}
+/* Dynamic Themes */
+
+.theme-blue {
+    background: linear-gradient(135deg, #0f2027, #004e92);
+}
+
+.theme-purple {
+    background: linear-gradient(135deg, #1a0028, #6a11cb);
+}
+
+.theme-green {
+    background: linear-gradient(135deg, #003b2f, #00b09b);
+}
+
+/* Button Theme */
+.btn-blue {
+    background: linear-gradient(45deg, #00c6ff, #0072ff) !important;
+}
+
+.btn-purple {
+    background: linear-gradient(45deg, #b347ff, #6a11cb) !important;
+}
+
+.btn-green {
+    background: linear-gradient(45deg, #00ffae, #00b09b) !important;
+}
+
+/* Result Colors */
+.result-blue {
+    color: #00c6ff;
+}
+
+.result-purple {
+    color: #d580ff;
+}
+
+.result-green {
+    color: #00ffae;
+}
